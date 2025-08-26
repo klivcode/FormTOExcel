@@ -1,0 +1,279 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Free Fire Tournament Registration</title>
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    </head>
+
+    <body>
+
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/web.png" alt="STREAK Logo" class="logo-image">
+                    <h1 data-text="sSTREAK">sSTREAK</h1>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="header">
+                    <p class="subtitle">Professional Tournament Registration</p>
+                </div>
+
+                <form id="tournamentForm" class="tournament-form">
+                    <!-- Personal Information Section -->
+                    <div class="form-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-user"></i>
+                            Personal Information
+                        </h2>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="playerName">Full Name *</label>
+                                <input type="text" id="playerName" name="playerName" placeholder="Enter your full name"
+                                    required>
+                                <span class="error-message" id="playerNameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="age">Age *</label>
+                                <input type="number" id="age" name="age" min="13" max="50"
+                                    placeholder="Enter your age (13-50)" required>
+                                <span class="error-message" id="ageError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country *</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select your country</option>
+                                <option value="IN">India</option>
+                                <option value="NP">Nepal</option>
+                            </select>
+                            <span class="error-message" id="countryError"></span>
+                        </div>
+                    </div>
+
+                    <!-- Gaming Information Section -->
+                    <div class="form-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-gamepad"></i>
+                            Gaming Information
+                        </h2>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="gameId">Free Fire Game ID *</label>
+                                <input type="text" id="gameId" name="gameId" placeholder="Game UID" required>
+                                <span class="error-message" id="gameIdError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ign">In-Game Name *</label>
+                                <input type="text" id="ign" name="ign" placeholder="In-Game Name" required>
+                                <span class="error-message" id="ignError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rank">Current Rank *</label>
+                                <select id="rank" name="rank" required>
+                                    <option value="">Select your rank</option>
+                                    <option value="bronze">Bronze</option>
+                                    <option value="silver">Silver</option>
+                                    <option value="gold">Gold</option>
+                                    <option value="platinum">Platinum</option>
+                                    <option value="diamond">Diamond</option>
+                                    <option value="heroic">Heroic</option>
+                                    <option value="grandmaster">Grandmaster</option>
+                                </select>
+                                <span class="error-message" id="rankError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="experience">Experience Level *</label>
+                                <select id="experience" name="experience" required>
+                                    <option value="">Select experience</option>
+                                    <option value="beginner">Beginner (0-6 months)</option>
+                                    <option value="intermediate">Intermediate (6 months - 2 years)</option>
+                                    <option value="advanced">Advanced (2+ years)</option>
+                                    <option value="professional">Professional/Esports</option>
+                                </select>
+                                <span class="error-message" id="experienceError"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tournament Details Section -->
+                    <div class="form-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-trophy"></i>
+                            Tournament Details
+                        </h2>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="category">Tournament Category *</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select category</option>
+                                    <option value="solo">Solo</option>
+                                    <option value="duo">Duo</option>
+                                    <option value="squad">Squad (4 players)</option>
+                                </select>
+                                <span class="error-message" id="categoryError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="teamName">Team Name</label>
+                                <input type="text" id="teamName" name="teamName" placeholder="Required for Duo/Squad">
+                                <span class="error-message" id="teamNameError"></span>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="form-groups" id="teammatesSection" style="display: none;">
+                        
+                            <!-- Teammate 1 -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="teammate1UID">Teammate 1 - Game UID</label>
+                                    <input type="text" id="teammate1UID" name="teammate1UID" placeholder="Enter Game UID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="teammate1Phone">Phone Number</label>
+                                    <input type="tel" id="teammate1Phone" name="teammate1Phone"
+                                        placeholder="Enter Phone Number">
+                                </div>
+                            </div>
+
+                            <!-- Teammate 2 -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="teammate2UID">Teammate 2 - Game UID</label>
+                                    <input type="text" id="teammate2UID" name="teammate2UID" placeholder="Enter Game UID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="teammate2Phone">Phone Number</label>
+                                    <input type="tel" id="teammate2Phone" name="teammate2Phone"
+                                        placeholder="Enter Phone Number">
+                                </div>
+                            </div>
+
+                            <!-- Teammate 3 -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="teammate3UID">Teammate 3 - Game UID</label>
+                                    <input type="text" id="teammate3UID" name="teammate3UID" placeholder="Enter Game UID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="teammate3Phone">Phone Number</label>
+                                    <input type="tel" id="teammate3Phone" name="teammate3Phone"
+                                        placeholder="Enter Phone Number">
+                                </div>
+                            </div>
+
+                            <!-- Teammate 4 -->
+                            <!-- <div class="form-row">
+                                <div class="form-group">
+                                    <label for="teammate4UID">Teammate 4 - Game UID</label>
+                                    <input type="text" id="teammate4UID" name="teammate4UID" placeholder="Enter Game UID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="teammate4Phone">Phone Number</label>
+                                    <input type="tel" id="teammate4Phone" name="teammate4Phone"
+                                        placeholder="Enter Phone Number">
+                                </div>
+                            </div> -->
+
+                            <span class="error-message" id="teammatesError"></span>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Screenshot Upload Section -->
+                    <div class="form-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-image"></i>
+                            Payment Proof Screenshot
+                        </h2>
+
+                        <div class="form-group">
+                            <label for="screenshot">Payment Screenshot *</label>
+                            <div class="file-upload-area" id="fileUploadArea">
+                                <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+                                <div class="upload-content">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Upload your payment screenshot</p>
+                                    <small>JPG, PNG, GIF (Max 5MB)</small>
+                                </div>
+                            </div>
+                            <div class="file-preview" id="filePreview"></div>
+                            <span class="error-message" id="screenshotError"></span>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="form-section">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                I agree to the <a href="#" class="link">Terms and Conditions</a> and <a href="#"
+                                    class="link">Privacy Policy</a> *
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Register Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="script.js"></script>
+    </body>
+
+    </html>
