@@ -322,9 +322,7 @@ body::after {
     overflow: hidden;
 }
 
-.form-section:hover {
-    /* No hover effects */
-}
+
 
 /* Unique Neon Corner Effects */
 .form-section::before {
@@ -355,10 +353,7 @@ body::after {
     transition: var(--transition-normal);
 }
 
-.form-section:hover::before,
-.form-section:hover::after {
-    /* No hover effects */
-}
+
 
 .section-title {
     display: flex;
@@ -385,9 +380,6 @@ body::after {
     text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
-.section-title:hover {
-    /* No hover effects */
-}
 
 /* Form Rows and Groups */
 .form-row {
