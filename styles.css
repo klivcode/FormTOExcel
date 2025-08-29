@@ -37,7 +37,7 @@
     --success-color: #10b981;
     --warning-color: #f59e0b;
     
-    /* Professional Gradients */
+    /* Professional Gradients  and */
     --gradient-primary: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
     --gradient-secondary: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
     --gradient-dark: linear-gradient(135deg, #0f1419, #1a1f2e);
