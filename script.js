@@ -10,7 +10,7 @@ class TournamentForm {
         this.teamNameField = document.getElementById('teamName');
 
         this.maxFileSize = 5 * 1024 * 1024; // 5MB
-        this.allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+        this.allowedTypes = ['image/jpeg', 'image/png', 'image/gif','image/jpg'];
 
         this.init();
     }
@@ -435,7 +435,7 @@ async submitForm() {
     }
 
     // Send POST to Apps Script web app URL
-    const response = await fetch("https://script.google.com/macros/s/AKfycbwsGeZkPGa1BkajzuHx2a402v7sljEKFrY10tOY6H3E8_W81BfqHfSAd4rvL6dqTG-azw/exec", {
+    const response = await fetch(CONFIG.APP_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors", // ✅ prevents CORS issues for Apps Script
         body: JSON.stringify(data),
