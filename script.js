@@ -435,7 +435,7 @@ async submitForm() {
     }
 
     // Send POST to Apps Script web app URL
-    const response = await fetch(CONFIG.APP_SCRIPT_URL, {
+    const response = await fetch("https://excelbacknd.onrender.com/api/key", {
         method: "POST",
         mode: "no-cors", // ✅ prevents CORS issues for Apps Script
         body: JSON.stringify(data),
