@@ -435,18 +435,15 @@ async submitForm() {
     }
 
     // Send POST to Apps Script web app URL
-    const response = await fetch("https://excelbacknd.onrender.com/api/key", {
-        method: "POST",
-        // ✅ prevents CORS issues for Apps Script
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    });
+   const response = await fetch("https://formbackendtoappscript.onrender.com/api/submit", {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+});
 
-    // Since `no-cors` blocks JS from reading the response,
-    // we just assume success if no network error occurred
-    return { status: "success" };
+return response;
+
 }
 
 // Convert file to Base64
